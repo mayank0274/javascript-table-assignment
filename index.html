@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Chemical Supplies Management" />
+    <meta
+      name="description"
+      content="Chemical Supplies Management : Simple and secure way to mange your lab chemical supplies"
+    />
+    <meta
+      name="keywords"
+      content="Chemical Supplies Management , supply management , chemistry lab management"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <link type="text/css" rel="stylesheet" href="./css/style.css" />
+    <!-- pwa manifest  -->
+    <link rel="manifest" href="manifest.json" />
+
+    <title>Chemical Supplies Management</title>
+  </head>
+  <body>
+    <section class="tableHeader">
+      <h1>Chemical Supplies</h1>
+      <section class="headerOptions">
+        <button class="btnAddItem" title="Add new data">
+          <img src="./assets/icons/addBtn.svg" width="25" height="25" />
+        </button>
+        <button class="btnSelectDown" title="row down">
+          <img src="./assets/icons/arrowDown.svg" width="25" height="25" />
+        </button>
+        <button class="btnSelectUp" title="row up">
+          <img src="./assets/icons/arrowUp.svg" width="25" height="25" />
+        </button>
+        <button class="btnDelete" title="delete row">
+          <img src="./assets/icons/trash.svg" width="25" height="25" />
+        </button>
+        <button class="btnEdit" title="edit a selected row">
+          <img src="./assets/icons/edit.svg" width="20" height="20" />
+        </button>
+        <button class="btnRefresh" title="revert all changes">
+          <img src="./assets/icons/refresh.svg" width="20" height="20" />
+        </button>
+        <button class="btnSave" title="save data">
+          <img src="./assets/icons/save.svg" width="20" height="20" />
+        </button>
+      </section>
+    </section>
+
+    <!-- manin data table  -->
+    <table class="chemicalsTable">
+      <thead>
+        <tr>
+          <th>
+            <img src="./assets/icons/checkMark.svg" width="17" height="17" />
+          </th>
+          <th data-order="random" data-column="chemicalName">
+            Chemical name <span class="sortIcon">&#9830;</span>
+          </th>
+          <th data-order="random" data-column="vendor">
+            Vendor <span class="sortIcon">&#9830;</span>
+          </th>
+          <th data-order="random" data-column="density">
+            Density
+            <span>g/m<sup>3</sup> <span class="sortIcon">&#9830;</span> </span>
+          </th>
+          <th data-order="random" data-column="viscosity">
+            Viscosity
+            <span>m<sup>2</sup>/s <span class="sortIcon">&#9830;</span> </span>
+          </th>
+          <th data-order="random" data-column="packaging">
+            Packaging <span class="sortIcon">&#9830;</span>
+          </th>
+          <th data-order="random" data-column="packSize">
+            Pack size <span class="sortIcon">&#9830;</span>
+          </th>
+          <th data-order="random" data-column="unit">
+            Unit <span class="sortIcon">&#9830;</span>
+          </th>
+          <th data-order="random" data-column="quantity">
+            Quantity <span class="sortIcon">&#9830;</span>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody></tbody>
+    </table>
+
+    <!-- edit data dialog  -->
+    <dialog class="editElementDialog">
+      <div class="dialogHeader">
+        <h1>Chemical Data Form</h1>
+        <button class="closeDialogBtn">X</button>
+      </div>
+      <form class="editForm" autocomplete="off">
+        <div class="form-group">
+          <label for="id">Id:</label>
+          <input type="text" id="id" name="id" class="id" required disabled />
+        </div>
+
+        <div class="form-group">
+          <label for="chemicalName">Chemical Name:</label>
+          <input
+            type="text"
+            id="chemicalName"
+            name="chemicalName"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="vendor">Vendor:</label>
+          <input
+            type="text"
+            id="vendor"
+            name="vendor"
+            class="form-control"
+            required
+          />
+           
+        </div>
+
+        <div class="form-group">
+          <label for="density">Density:</label>
+          <input
+            type="number"
+            id="density"
+            name="density"
+            class="form-control"
+            step="0.01"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="viscosity">Viscosity:</label>
+          <input
+            type="number"
+            id="viscosity"
+            name="viscosity"
+            class="form-control"
+            step="0.01"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="packaging">Packaging:</label>
+          <input
+            type="text"
+            id="packaging"
+            name="packaging"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="packSize">Pack Size:</label>
+          <input
+            type="number"
+            id="packSize"
+            name="packSize"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="unit">Unit:</label>
+          <input
+            type="text"
+            id="unit"
+            name="unit"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">Quantity:</label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            class="form-control"
+            required
+          />
+        </div>
+      </form>
+
+      <input
+        type="submit"
+        value="Edit"
+        class="btn btn-primary editFormSubmitBtn"
+      />
+    </dialog>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

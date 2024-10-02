@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../assets/fonts/space_mono.woff2") format("woff2");
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  overflow-x: hidden;
+}
+
+/* table header  */
+.tableHeader {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.tableHeader h1 {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.headerOptions {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.headerOptions button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btnAddItem,
+.btnSave,
+.btnRefresh {
+  color: blue;
+}
+
+.btnSelectDown,
+.btnSelectUp {
+  color: #64748bb8;
+}
+
+.btnDelete {
+  color: orangered;
+}
+
+.activeBtn {
+  filter: sepia(40%) hue-rotate(180deg) brightness(70%) saturate(800%);
+}
+
+/* main table  */
+.chemicalsTable {
+  width: 70%;
+  border: 1px solid gainsboro;
+  padding: 1px;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+th,
+td {
+  font-size: 1.5rem;
+  /* text-align: center; */
+  font-weight: 300;
+  padding: 1rem;
+  border-right: 1px solid gainsboro;
+}
+
+th {
+  cursor: pointer;
+}
+
+th span {
+  display: block;
+  font-size: 1.2rem;
+  color: gray;
+}
+
+span .sortIcon {
+  display: inline;
+}
+
+.sortIcon {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.check {
+  cursor: pointer;
+}
+
+tr input {
+  padding: 0.8rem;
+  width: 100%;
+}
+
+.activeRow {
+  background-color: #64748b34;
+}
+
+.activeRow .check {
+  filter: sepia(40%) hue-rotate(180deg) brightness(70%) saturate(800%);
+}
+
+/* edit dialog  */
+dialog[open] {
+  display: block;
+  width: 60%;
+  padding: 10px;
+  position: fixed;
+  top: 4%;
+  left: 20%;
+  overflow-y: hidden;
+  border: none;
+}
+
+dialog:not([open]) {
+  display: none !important;
+}
+
+.editElementDialog h1 {
+  text-align: center;
+  width: 90%;
+}
+
+.editElementDialog form {
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 3rem;
+  place-content: center;
+}
+
+.editElementDialog .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.editElementDialog label {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.editElementDialog input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.editElementDialog input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  display: block;
+  margin: auto;
+}
+
+.dialogHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialogHeader button {
+  font-size: 2.4rem;
+  margin-left: auto;
+  border: 1px solid #000;
+  color: red;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+}
+
+/* responsive  */
+@media screen and (max-width: 800px) {
+  body {
+    padding: 1rem;
+  }
+
+  .tableHeader {
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .tableHeader h1 {
+    font-size: 2rem;
+  }
+
+  .headerOptions {
+    align-self: flex-end;
+  }
+
+  .chemicalsTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .chemicalsTable,
+  .chemicalsTable tbody {
+    width: 100%;
+  }
+
+  dialog[open] {
+    width: 85%;
+    left: 8%;
+    overflow-y: scroll;
+  }
+
+  .editElementDialog form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

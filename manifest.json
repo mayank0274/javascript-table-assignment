@@ -1,0 +1,56 @@
+{
+    "name": "Chemical Supplies Management",
+    "short_name": "Chemical Supplies Management",
+    "description":"Chemical Supplies Management : Simple and secure way to mange your lab chemical supplies",
+    "theme_color": "#fff",
+    "background_color": "#fff",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "start_url": "index.html",
+    "icons": [
+        {
+            "src": "/assets/pwa-icons/android/android-launchericon-512-512.png",
+            "sizes": "512x512"
+          },
+          {
+            "src": "/assets/pwa-icons/android/android-launchericon-192-192.png",
+            "sizes": "192x192"
+          },
+          {
+            "src": "/assets/pwa-icons/android/android-launchericon-144-144.png",
+            "sizes": "144x144"
+          },
+          {
+            "src": "/assets/pwa-icons/android/android-launchericon-96-96.png",
+            "sizes": "96x96"
+          },
+          {
+            "src": "/assets/pwa-icons/android/android-launchericon-72-72.png",
+            "sizes": "72x72"
+          },
+          {
+            "src": "/assets/pwa-icons/android/android-launchericon-48-48.png",
+            "sizes": "48x48"
+          },
+          {
+            "src": "/assets/pwa-icons/ios/100.png",
+            "sizes": "100x100"
+          }
+    ],
+    "screenshots":[
+      {
+        "src":"/assets/pwa-icons/screenshots/desktop.png",
+          "sizes":"832x555",
+          "type":"image/png",
+          "form_factor":"wide",
+          "label":"Chemical Supplies Management"
+      },
+      {
+        "src":"/assets/pwa-icons/screenshots/mobile.png",
+          "sizes":"360x780",
+          "type":"image/png",
+          "form_factor_wide":"handset",
+          "label":"Chemical Supplies Management"
+      }
+    ]
+  }
