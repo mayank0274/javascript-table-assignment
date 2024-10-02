@@ -4,6 +4,9 @@ Create a table with sort,add,delete,edit functionality
 
 ### Live Preview : https://js-assignment-table.netlify.app/
 
+### Demo in PWA
+https://github.com/user-attachments/assets/7922f9cf-3c38-4a5b-b1da-79e49a7b32c0
+
 ## Documenatation
 
 ### Folder structure
